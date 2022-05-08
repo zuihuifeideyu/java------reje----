@@ -1,0 +1,26 @@
+server:
+  port: 8080
+spring:
+  application:
+    #应用的名称，可选项，如果不设置默认就是项目的名称
+    name: reje
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/reggie?serverTimezone=UTC
+      username: root
+      password: Xzy19980422
+mybatis-plus:
+  configuration:
+    #在映射实体或者属性时，将数据库中表名和字段名中的下创线去掉，按照驼峰命名法映射
+    #address_book ----> addressBook   表明->实体类类名
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    #控制台输出日志
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID
+      #主键生成策略
+      #主键在entity类中统一都叫id,会自动生成
+reje:
+  path: /Users/xuzhenyu/Downloads/JAVA资料/黑马课程资料/实战/7、黑马程序员瑞吉外卖平台实战开发/1 瑞吉外卖项目
